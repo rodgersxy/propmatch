@@ -1,0 +1,31 @@
+# General
+.DS_Store
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Node / Client
+apps/client/node_modules
+apps/client/dist
+apps/client/.vite
+
+# Laravel / Server
+apps/server/node_modules
+apps/server/vendor
+apps/server/.env
+apps/server/storage/framework/sessions/*
+apps/server/storage/framework/views/*
+apps/server/storage/framework/cache/data/*
+apps/server/storage/logs/*.log
+apps/server/public/storage
+apps/server/public/hot
+
+# Python / Match Engine
+apps/match-engine/venv
+apps/match-engine/__pycache__/
+apps/match-engine/.pytest_cache
