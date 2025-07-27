@@ -1,9 +1,10 @@
 // src/components/landing/Footer.jsx
-import { FaTwitter, FaFacebookF, FaGithub, FaTiktok, FaInstagram } from 'react-icons/fa';
+import { FaFacebookF, FaTiktok, FaInstagram } from 'react-icons/fa';
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-base-100 py-12">
+    <footer className="w-full bg-hero-gradient from-gradient-start to-gradient-end py-12">
       <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
 
         {/* Case Study */}
@@ -21,7 +22,7 @@ const Footer = () => {
             <a href="#" className="hover:text-primary">Contact</a>
           </div>
           <div className="flex gap-4 text-neutral">
-            <a href="#" className="hover:text-accent"><FaTwitter size={20} /></a>
+            <a href="#" className="hover:text-accent"><FaXTwitter size={20} /></a>
             <a href="#" className="hover:text-accent"><FaFacebookF size={20} /></a>
             <a href='#' className="hover:text-accent"><FaTiktok size={20} /></a>
             <a href="#" className="hover:text-accent"><FaInstagram size={20} /></a>

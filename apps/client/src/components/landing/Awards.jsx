@@ -1,6 +1,5 @@
 // src/components/landing/Awards.jsx
 
-// A small component for the laurel wreath SVG to keep the main component clean
 const LaurelWreath = () => (
   <svg
     className="w-8 h-8 text-gray-400"
