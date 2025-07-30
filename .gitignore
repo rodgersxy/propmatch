@@ -1,6 +1,7 @@
 # General
 .DS_Store
 .env
+.env.example
 .env.local
 .env.development.local
 .env.test.local
@@ -29,3 +30,5 @@ apps/server/public/hot
 apps/match-engine/venv
 apps/match-engine/__pycache__/
 apps/match-engine/.pytest_cache
+
+README.md

@@ -18,7 +18,7 @@ const Footer = () => {
         {/* Footer Links & Socials */}
         <div className="flex flex-col items-center md:items-end gap-4">
           <div className="flex gap-6 font-semibold text-neutral">
-            <a href="#" className="hover:text-primary">About</a>
+            <a href="#about" className="hover:text-primary">About</a>
             <a href="#" className="hover:text-primary">Contact</a>
           </div>
           <div className="flex gap-4 text-neutral">

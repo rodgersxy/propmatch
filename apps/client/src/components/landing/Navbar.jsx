@@ -17,6 +17,11 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex items-center gap-x-8">
+          <a href="#">
+            <button className="bg-accent text-neutral font-bold px-6 py-2.5 rounded-md hover:bg-accent-focus transition-all duration-300">
+              Find My Perfect Match
+            </button>
+          </a>
           <a href="#articles" className="font-semibold text-neutral hover:text-primary transition-colors duration-300">Articles</a>
           <a href="#about" className="font-semibold text-neutral hover:text-primary transition-colors duration-300">About</a>
           <a href="#" className="font-semibold text-neutral hover:text-primary transition-colors duration-300">Login</a>
@@ -34,6 +39,11 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <nav className={`md:hidden fixed top-0 left-0 w-full h-screen bg-white flex flex-col justify-center items-center transition-transform duration-300 ease-in-out ${nav ? 'translate-x-0' : '-translate-x-full'}`}>
+          <a href="#" onClick={handleClick} className="py-6">
+            <button className="bg-accent text-neutral font-bold px-8 py-4 rounded-md text-2xl">
+              Find My Perfect Match
+            </button>
+          </a>
           <a href="#articles" onClick={handleClick} className="py-6 text-4xl hover:text-primary">Articles</a>
           <a href="#about" onClick={handleClick} className="py-6 text-4xl hover:text-primary">About</a>
           <a href="#" onClick={handleClick} className="py-6 text-4xl hover:text-primary">Login</a>

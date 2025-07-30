@@ -1,27 +1,34 @@
 // src/App.jsx
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Navbar from './components/landing/Navbar';
-import Hero from './components/landing/Hero';
-import HowItWorks from './components/landing/HowItWorks'; // 1. Import the component
-import Articles from './components/landing/Articles'; // Import Articles
-import About from './components/landing/About';  
-import Footer from './components/landing/Footer';
+// Import Layouts and Pages
+import LandingPage from './pages/LandingPage';
+import AdminLayout from './components/admin/AdminLayout';
+import LoginPage from './pages/admin/LoginPage';
+import DashboardPage from './pages/admin/DashboardPage';
+import PropertyListingsPage from './pages/admin/PropertyListingsPage';
+import ArticleManagementPage from './pages/admin/ArticleManagementPage';
+
 
 function App() {
   return (
-    <main>
-      <Navbar />
-      <Hero />
-      
-      {/* 2. Replace the placeholder div with our new component */}
-      <HowItWorks />
+    <Router>
+      <Routes>
+        {/* Public Routes */}
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/admin/login" element={<LoginPage />} />
 
-      <Articles />
-      <About />
-
-      <Footer />
-    </main>
-  )
+        {/* Admin Protected Routes - All wrapped by AdminLayout */}
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route path="dashboard" element={<DashboardPage />} />
+          <Route path="properties" element={<PropertyListingsPage />} />
+          <Route path="articles" element={<ArticleManagementPage />} />
+          
+        </Route>
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
